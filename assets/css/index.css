@@ -1,0 +1,314 @@
+/* ----- RESET ----- */
+* {
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body, p, ul, ol, dl, textarea, input {
+    font-family: 'LeagueGothic';
+    font-size: 25px;
+}
+
+/* ----- FONTS ----- */
+@font-face {
+    font-family: 'LeagueGothic';
+    src: url('../fonts/LeagueGothic.otf');
+}
+
+.leaguegothic {
+    font-family: 'LeagueGothic';
+}
+
+/* ----- BLUEPRINT ----- */
+/* container_width/#divisions - margin */
+.xoblueprint {
+    width: 950px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.x1, .x2, .x3, .x4, .x5, .x6 {
+    float: left;
+    margin-right: 10px;
+}
+
+.last {
+    margin-right: 0;
+    clear: right;
+}
+
+.x1 {
+    width: 150px;
+}
+
+.x2 {
+    width: 310px;
+}
+
+.x3 {
+    width: 470px;
+}
+
+.x4 {
+    width: 630px;
+}
+
+.x5 {
+    width: 790px;
+}
+
+.x6, .full {
+    width: 950px;
+    margin-right: 0;
+}
+
+/* ----- TEXT ----- */
+.f0 {
+    font-size: 15px;
+}
+
+.f1 {
+    font-size: 25px;
+}
+
+.f2 {
+    font-size: 50px;
+}
+
+.f3 {
+    font-size: 100px;
+}
+
+.f4 {
+    font-size: 150px;
+}
+
+.f5 {
+    font-size: 200px;
+}
+
+body {
+    overflow: hidden;
+}
+
+.container {
+    background: linear-gradient(
+            #f6dcff,
+            transparent
+    ),
+    linear-gradient(
+            -90deg, #ffafe6,
+            transparent
+    ),
+    linear-gradient(
+            90deg, #ffe4cd,
+            transparent
+    );
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(61, 100%, 81%);
+
+    -webkit-animation: hue 9s infinite alternate; /* Chrome, Safari, Opera */
+
+}
+
+@keyframes hue {
+    /*hue will animate from 0 to 360. Saturation and Lightness remain constant*/
+    20% {
+        background-color: hsl(82, 100%, 50%);
+    }
+    40% {
+        background-color: hsl(144, 100%, 50%);
+    }
+    60% {
+        background-color: hsl(216, 100%, 50%);
+    }
+    80% {
+        background-color: hsl(288, 100%, 50%);
+    }
+    100% {
+        background-color: hsl(360, 100%, 50%);
+    }
+}
+
+@-webkit-keyframes hue {
+    /*hue will animate from 0 to 360. Saturation and Lightness remain constant*/
+    20% {
+        background-color: hsl(32, 100%, 50%);
+    }
+    30% {
+        background-color: hsl(82, 100%, 50%);
+    }
+    40% {
+        background-color: hsl(124, 100%, 50%);
+    }
+    50% {
+        background-color: hsl(144, 100%, 50%);
+    }
+    60% {
+        background-color: hsl(186, 100%, 50%);
+    }
+    70% {
+        background-color: hsl(216, 100%, 50%);
+    }
+    80% {
+        background-color: hsl(248, 100%, 50%);
+    }
+    90% {
+        background-color: hsl(288, 100%, 50%);
+    }
+    95% {
+        background-color: hsl(330, 100%, 50%);
+    }
+    100% {
+        background-color: hsl(360, 100%, 50%);
+    }
+}
+
+.noanchor:link, .noanchor:visited, .noanchor:active {
+    text-decoration: none;
+    color: white;
+}
+
+.lghtgrey {
+    color: white;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+}
+
+#logo {
+    left: 10px;
+    top: 0px;
+}
+
+.jscode {
+    background-color: white;
+    font-family: "Courier New", Courier, monospace;
+    width: 600px;
+    margin-left: 40px;
+    padding: 10 15 10 15;
+    -moz-box-shadow: 5px 5px 5px #888;
+    -webkit-box-shadow: 5px 5px 5px #888;
+    box-shadow: 5px 5x 5px #888;
+}
+
+p {
+    margin-left: 10px;
+    font-family: Calibri;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+#titlebox {
+    position: absolute;
+
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    width: 650px;
+    height: 500px;
+    margin-left: -325px;
+    margin-top: -250px;
+
+    text-align: center;
+    font-family: arial;
+    font-size: 17px;
+}
+
+#codebox {
+    margin-top: 20px;
+    background-color: white;
+    font-family: "Courier New", Courier, monospace;
+    width: 500px;
+    height: 100px;
+    margin-left: 40px;
+    padding: 10 15 10 15;
+    -moz-box-shadow: 5px 5px 5px #888;
+    -webkit-box-shadow: 5px 5px 5px #888;
+    box-shadow: 5px 5x 5px #888;
+}
+
+.dirText {
+    color: white;
+    font-size: 40px;
+    margin-top: 45px;
+    opacity: 0.0;
+}
+
+#para1 {
+    top: 30%;
+    left: 20%;
+    width: 50px;
+    height: 30px;
+    background-color: white;
+}
+
+#para2 {
+    top: 40%;
+    left: 60%;
+    width: 20px;
+    height: 40px;
+    background-color: yellow;
+}
+
+#para3 {
+    top: 60%;
+    left: 10%;
+    width: 20px;
+    height: 40px;
+    background-color: white;
+}
+
+#para4 {
+    top: 50%;
+    right: 10%;
+    width: 60px;
+    height: 40px;
+    background-color: darkblue;
+}
+
+.cPara {
+    position: absolute;
+}
+
+.floating {
+    -webkit-animation-name: Floatingx;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: Floating;
+    -moz-animation-duration: 3s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+
+}
+
+@-webkit-keyframes Floatingx {
+    from {
+        -webkit-transform: translate(0, 0px);
+    }
+    65% {
+        -webkit-transform: translate(0, 15px);
+    }
+    to {
+        -webkit-transform: translate(0, -0px);
+    }
+}
+
+@-moz-keyframes Floating {
+    from {
+        -moz-transform: translate(0, 0px);
+    }
+    65% {
+        -moz-transform: translate(0, 15px);
+    }
+    to {
+        -moz-transform: translate(0, -0px);
+    }
+}
