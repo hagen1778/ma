@@ -14,7 +14,7 @@
     <div id = "navBoxTop" class = 'nav'>
         <ul class="nav-pills robotolight">
             <li ng-class="{active:isActive('/{{ item.path }}')}" ng-repeat="item in tabs">
-                <a href="#/{{item.path}}">{{ item.title }}</a>
+                <a href="/{{item.path}}">{{ item.title }}</a>
             </li>
         </ul>
     </div>
@@ -24,7 +24,7 @@
     <div id = "navBoxBot" class = 'nav'>
         <ul class="nav-pills robotolight">
             <li ng-class="{active:isActive('/{{ item.path }}')}" ng-repeat="item in tabs">
-                <a href="#/{{item.path}}">{{ item.title }}</a>
+                <a href="/{{item.path}}">{{ item.title }}</a>
             </li>
         </ul>
     </div>

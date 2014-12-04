@@ -2,7 +2,7 @@
 
     var app = angular.module('MA', ['ngRoute']);
 
-    app.config(function ($routeProvider) {
+    app.config(function ($routeProvider,$locationProvider) {
         $routeProvider
             .when('/:id', {
                 controller: 'PageController',
@@ -15,8 +15,14 @@
                 templateUrl: 'page/home.html'
             }
             )
-            .otherwise({redirectTo: '/'});
+            .otherwise({redirectTo: ''});
+
+        $locationProvider.html5Mode(true);
+
+
     });
+
+
 
     app.controller('PageController', function ($scope, $location) {
         $scope.tabs = [
