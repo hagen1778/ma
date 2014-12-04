@@ -4,25 +4,47 @@
     <link rel="Stylesheet" type="text/css" href="assets/css/index.css"/>
 
     <script src="assets/js/bower_components/angular/angular.min.js"></script>
-    <script src="assets/js/bower_components/angular-route/angular-route.js"></script> 
+    <script src="assets/js/bower_components/angular-route/angular-route.js"></script>
     <script src="assets/js/app.js"></script>
 </head>
 <body  class="background">
 
-<div class="container">
+<div class="container" ng-controller = "PageController">
 
-    <a href = '#/works'>works</a>
-    <div id="titlebox" class="f2 lghtgrey leaguegothic">
-        <div class="f5 white">M A</div>
-        It'll make your monocle drop.
+    <div id = "navBoxTop" class = 'nav'>
+        <ul class="nav-pills robotolight">
+            <li ng-class="{active:isActive('/{{ item.path }}')}" ng-repeat="item in tabs">
+                <a href="#/{{item.path}}">{{ item.title }}</a>
+            </li>
+        </ul>
     </div>
 
     <div ng-view></div>
 
-    <!--    <div id='para1' class='cPara floating' ></div>
+    <div id = "navBoxBot" class = 'nav'>
+        <ul class="nav-pills robotolight">
+            <li ng-class="{active:isActive('/{{ item.path }}')}" ng-repeat="item in tabs">
+                <a href="#/{{item.path}}">{{ item.title }}</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id = "social">
+        <a class="facebook-icon" title="Facebook" target="_blank" service="facebook" href="#">&nbsp;</a>
+        <a class="facebook-icon" title="Facebook" target="_blank" service="facebook" href="#">&nbsp;</a>
+        <a class="facebook-icon" title="Facebook" target="_blank" service="facebook" href="#">&nbsp;</a>
+    </div>
+
+    <div id = "footer" class = 'robotolight'>
+        © 2014 MA. Trademarks and brands are the property of their respective owners.
+    </div>
+
+    <!--
+    <div id='para1' class='cPara floating' ></div>
     <div id='para2' class='cPara floating' ></div>
     <div id='para3' class='cPara floating' ></div>
-    <div id='para4' class='cPara floating' ></div>-->
+    <div id='para4' class='cPara floating' ></div>
+    -->
 </div>
 
 </body>

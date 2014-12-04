@@ -16,9 +16,16 @@ body, p, ul, ol, dl, textarea, input {
     font-family: 'LeagueGothic';
     src: url('../fonts/LeagueGothic.otf');
 }
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('../fonts/ROBOTO-LIGHT.TTF');
+}
 
 .leaguegothic {
     font-family: 'LeagueGothic';
+}
+.robotolight {
+    font-family: 'Roboto-Light';
 }
 
 /* ----- BLUEPRINT ----- */
@@ -311,4 +318,90 @@ p {
     to {
         -moz-transform: translate(0, -0px);
     }
+}
+
+/* NAVIGATION */
+
+#navBoxTop {
+    top: 0;
+}
+
+#navBoxBot {
+    bottom: 110px;
+}
+.nav {
+    width: 400px;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    margin-left: -200px;
+}
+.nav ul{
+    list-style: none;
+}
+
+.nav li {
+    display: inline-block;
+    color: white;
+    margin-left: 4px;
+    font-size: 14px;
+}
+
+.nav li.active a{
+    font-size: 30px;
+}
+
+.nav li:after {
+    content: "/";
+}
+
+.nav li:last-child:after {
+    content: "";
+}
+
+.nav li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* SOCIAL */
+#social {
+    position: absolute;
+    width: 100%;
+    bottom: 50px;
+    padding: 8px 0 10px 0;
+
+    text-align: center;
+}
+#social a {
+    width: 37px;
+    height: 37px;
+    display: inline-block;
+    box-shadow: none;
+    border: none;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    text-decoration: none;
+
+    margin: 0 5px;
+    color: #fff !important;
+}
+.facebook-icon {
+    background-image: url("../img/fb_icon.png");
+}
+/* FOOTER */
+#footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 8px 0 10px 0;
+
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    
+    border-top: 1px solid rgba(255, 255, 255, 0.50);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
 }
