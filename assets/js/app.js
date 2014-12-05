@@ -18,11 +18,7 @@
             .otherwise({redirectTo: ''});
 
         //$locationProvider.html5Mode(true);
-
-
     });
-
-
 
     app.controller('PageController', function ($scope, $location) {
         $scope.tabs = [
