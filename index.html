@@ -14,17 +14,17 @@
     <div id = "navBoxTop" class = 'nav'>
         <ul class="nav-pills robotolight">
             <li ng-class="{active:isActive('/{{ item.path }}')}" ng-repeat="item in tabs">
-                <a href="/{{item.path}}">{{ item.title }}</a>
+                <a href="#/{{item.path}}">{{ item.title }}</a>
             </li>
         </ul>
     </div>
 
     <div ng-view></div>
 
-    <div id = "navBoxBot" class = 'nav'>
+    <div id = "navBoxBot" class = 'nav' ng-show="!isActive('/')">
         <ul class="nav-pills robotolight">
             <li ng-class="{active:isActive('/{{ item.path }}')}" ng-repeat="item in tabs">
-                <a href="/{{item.path}}">{{ item.title }}</a>
+                <a href="#/{{item.path}}">{{ item.title }}</a>
             </li>
         </ul>
     </div>
