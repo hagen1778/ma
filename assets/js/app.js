@@ -2,7 +2,7 @@
 
     var app = angular.module('MA', ['ngRoute']);
 
-    app.config(function ($routeProvider,$locationProvider) {
+    app.config(function ($routeProvider, $locationProvider) {
         $routeProvider
             .when('/:id', {
                 controller: 'PageController',
@@ -14,7 +14,7 @@
                 controller: 'PageController',
                 templateUrl: 'page/home.html'
             }
-            )
+        )
             .otherwise({redirectTo: ''});
 
         //$locationProvider.html5Mode(true);
@@ -33,49 +33,33 @@
         }
     });
 
+    app.controller('ShuffleController', function ($scope) {
+        $scope.buttons = [
+            {title: 'Wallpapers', datagroup: 'wallpaper'},
+            {title: 'Graphic Design', datagroup: 'graphics'},
+            {title: 'Photos', datagroup: 'photography'},
+            {title: '3D Renders', datagroup: '3d'},
+        ];
+        $scope.shuffleFilter = function (datagroup) {
+            $scope.activeDatagroup = $scope.activeDatagroup==datagroup ? 'all' : datagroup;
+            $scope.grid.shuffle('shuffle', $scope.activeDatagroup);
+        }
+    });
 
-    app.directive('shuffle', function() {
+    app.directive('shuffle', function () {
         return {
             // Restrict it to be an attribute in this case
             restrict: 'A',
             // responsible for registering DOM listeners as well as updating the DOM
-            link: function(scope, element, attrs) {
+            link: function (scope, element, attrs) {
                 scope.grid = $(element),
                     $sizer = scope.grid.find('.shuffle__sizer');
 
                 scope.grid.shuffle({
                     itemSelector: '.picture-item',
-                    sizer: $sizer
+                  //  sizer: $sizer,
+                    columnWidth: 111
                 });
-            }
-        };
-    });
-
-    app.directive('shufflebtns', function() {
-        return {
-            // Restrict it to be an attribute in this case
-            restrict: 'A',
-            // responsible for registering DOM listeners as well as updating the DOM
-            link: function(scope, element, attrs) {
-                var $btns = $(element).children();
-
-                $btns.on('click', function() {
-                    var $this = $(this),
-                        isActive = $this.hasClass( 'active' ),
-                        group = isActive ? 'all' : $this.data('group');
-
-                    // Hide current label, show current label in title
-                    if ( !isActive ) {
-                        $('.filter-options .active').removeClass('active');
-                    }
-
-                    $this.toggleClass('active');
-
-                    // Filter elements
-                    scope.grid.shuffle( 'shuffle', group );
-                });
-
-                $btns = null;
             }
         };
     });
