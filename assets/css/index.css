@@ -468,3 +468,34 @@ body {
 button.active{
     color: red;
 }
+/*
+.shuffle__sizer {
+    position: absolute;
+    opacity: 0;
+    width:33%;
+    visibility: hidden;
+}
+@media (min-width: 75em){
+    .row-fluid .span3 {
+        width: 23.076923076923077%;
+    }
+}
+
+    @media (min-width: 75em){
+        .row-fluid [class*="span"] {
+            display: block;
+            width: 100%;
+            min-height: 30px;
+            box-sizing: border-box;
+            float: left;
+            margin-left: 2.564102564102564%;
+        }
+    }
+
+
+.picture-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+*/

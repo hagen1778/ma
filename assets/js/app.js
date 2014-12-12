@@ -55,10 +55,10 @@
                 scope.grid = $(element),
                     $sizer = scope.grid.find('.shuffle__sizer');
 
+                console.log($sizer)
                 scope.grid.shuffle({
                     itemSelector: '.picture-item',
-                  //  sizer: $sizer,
-                    columnWidth: 111
+                    columnWidth: 313
                 });
             }
         };
