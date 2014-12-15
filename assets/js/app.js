@@ -35,10 +35,10 @@
 
     app.controller('ShuffleController', function ($scope) {
         $scope.buttons = [
-            {title: 'Wallpapers', datagroup: 'wallpaper'},
-            {title: 'Graphic Design', datagroup: 'graphics'},
-            {title: 'Photos', datagroup: 'photography'},
-            {title: '3D Renders', datagroup: '3d'},
+            {title: 'view all', datagroup: 'all'},
+            {title: 'web design', datagroup: 'web'},
+            {title: 'graphic design', datagroup: 'graphic'},
+            {title: 'illustration', datagroup: 'illustration'}
         ];
         $scope.shuffleFilter = function (datagroup) {
             $scope.activeDatagroup = $scope.activeDatagroup==datagroup ? 'all' : datagroup;
@@ -46,22 +46,33 @@
         }
     });
 
-    app.directive('shuffle', function () {
+    app.directive('shuffle', ['$timeout',function (timer) {
+
         return {
             // Restrict it to be an attribute in this case
             restrict: 'A',
             // responsible for registering DOM listeners as well as updating the DOM
-            link: function (scope, element, attrs) {
-                scope.grid = $(element),
-                    $sizer = scope.grid.find('.shuffle__sizer');
+//            transclude: true,
+            link: function postLink (scope, element, attrs) {
+                if($(element).mixItUp('isLoaded')){
+                    $(element).mixItUp('destroy')
+                }
+                $(element).mixItUp({
+                    animation: {
+                        duration: 400,
+                        effects: 'fade translateZ(-360px) stagger(34ms) scale(0.47)',
+                        easing: 'ease'
+                    }
+                })
+                   /* if (typeof($('#grid').mixItUp('destroy')) === 'function'){
+                        $('#grid').mixItUp('destroy');
+                    }*/
 
-                console.log($sizer)
-                scope.grid.shuffle({
-                    itemSelector: '.picture-item',
-                    columnWidth: 313
-                });
+
+
+
             }
         };
-    });
+    }]);
 
 })();
