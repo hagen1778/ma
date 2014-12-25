@@ -144,6 +144,33 @@ body {
             90deg, #ffe4cd,
             transparent
     );
+
+    background: -webkit-linear-gradient(
+            #f6dcff,
+            transparent
+    ),
+    -webkit-linear-gradient(
+            -90deg, #ffafe6,
+            transparent
+    ),
+    -webkit-linear-gradient(
+            90deg, #ffe4cd,
+            transparent
+    );
+
+    background: -moz-linear-gradient(
+            #f6dcff,
+            transparent
+    ),
+    -moz-linear-gradient(
+            -90deg, #ffafe6,
+            transparent
+    ),
+    -moz-linear-gradient(
+            90deg, #ffe4cd,
+            transparent
+    );
+
     /*position: fixed;*/
     background-attachment: fixed;
     overflow: auto;
@@ -152,6 +179,9 @@ body {
     background-color: hsl(61, 100%, 81%);
 
     -webkit-animation: hue 9s infinite alternate; /* Chrome, Safari, Opera */
+    -moz-animation: hue 9s infinite alternate;
+    -o-animation: hue 9s infinite alternate;
+    animation: hue 9s infinite alternate;
 
 }
 
@@ -631,6 +661,7 @@ button.active{
     margin: 0 5px;
 }
 
+/*
 
 #svg_cont {
 position: relative;
@@ -674,4 +705,4 @@ height: 110px;
     to {
         stroke-dashoffset: 0;
     }
-}
+}*/
