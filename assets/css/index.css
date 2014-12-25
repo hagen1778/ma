@@ -378,7 +378,7 @@ body {
 .nav li {
     display: inline-block;
     color: white;
-    margin-left: 4px;
+    margin: 0 8px;
     font-size: 14px;
 }
 
@@ -387,11 +387,13 @@ body {
 }
 
 .nav li:after {
+    margin-left: 8px;
     content: "/";
 }
 
 .nav li:last-child:after {
     content: "";
+    margin: 0;;
 }
 
 .nav li a {
@@ -442,18 +444,19 @@ body {
 }
 
 /* PAGE */
-.pageContainer{
-    position: relative;
-    
+#container{
+    /*position: relative;*/
     max-width: 1100px;
     min-width: 940px;
-
     width: 100%;
-    /*height: 100vh;*/
-    background-color: rgba(253, 245, 249, 0.70);
-
-    margin: 100px auto 170px auto;
+    margin: 100px auto 140px auto;
     padding-bottom: 30px;
+}
+.pageContainer{
+padding-bottom: 15px;
+}
+.pink{
+    background-color: rgba(253, 245, 249, 0.70);
 }
 .imgHeader{
     width: 100%;
@@ -465,9 +468,7 @@ body {
     margin: 0;
     padding: 0;
 }
-button.active{
-    color: red;
-}
+
 /*
 .shuffle__sizer {
     position: absolute;
@@ -501,21 +502,176 @@ button.active{
 */
 #grid{
     overflow: hidden;
+    min-height: 700px;
 }
 #grid .mix{
     display: none;
 }
-#grid div{
+#grid .masked{
     width: 25%;
     float: left;
-    margin: 0;
+    margin-bottom: 2px;
     padding: 0;
     border: none;
+    overflow: hidden;
+    position: relative;
 }
-#grid div img{
+#grid .masked img{
     max-width:100%;
     max-height:100%;
     margin: 0;
     padding: 0;
     border: none;
+    vertical-align: top;
+}
+
+/* gallery */
+.filter-options{
+    text-align: center;
+}
+.filter-options button{
+    background: none;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: 10px 20px;
+}
+button.active{
+    font-size: 18px;
+}
+.masked .mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    overflow:visible;
+    border:100px solid rgba(255, 255, 255, 0.90);
+    box-sizing:border-box;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.masked a.info {
+    position:relative;
+    top:-10px; /* Center the link */
+    opacity: 0;
+    transition: opacity 0.5s 0s ease-in-out;
+}
+
+.masked:hover .mask {
+    opacity: 1;
+    border:100px solid rgba(255, 255, 255, 0.90);
+}
+
+.masked:hover a.info {
+    opacity:1;
+    transition-delay: 0.3s;
+}
+.masked .cross {
+    background: url(../img/cross.png) center no-repeat;
+    display: inline-block;
+    padding: 0;
+    width: 48px;
+    height: 48px;
+    top: -35px;
+    transform: translateX(-145px);
+    position: absolute;
+    transition: transform 0.3s ease-in, opacity 0.1s ease-in-out;
+}
+.masked:hover .cross{
+    transform: translateX(-90px);
+}
+.masked .info{
+    transform: translateY(30px);
+    transition: transform 0.3s ease-in, opacity 0.1s ease-in-out;
+    width: 245px;
+    position: absolute;
+    left: -70px;
+}
+.masked .info h2{
+    font-size:  22px;
+}
+.masked:hover .info{
+    transform: translateY(-90px);
+}
+
+.back{
+    position: absolute;
+    background: url(../img/arrow.png) 0 center no-repeat;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-left: 30px;
+    color: white;
+    font-size: 14px;
+    top: -22px;
+}
+
+.stl_bg{
+    height: 100%;
+    width: 30px;
+    position: fixed;
+    cursor: pointer;
+    display: none;
+}
+.stl_bg:hover{
+    background: rgba(239, 102, 102, 0.2);
+}
+.stl_bg.show{
+    display: block;
+}
+.stl_text{
+    position: absolute;
+    top: 50%;
+    font-size: 14px;
+    background: url(../img/arrow_up.png) top center no-repeat;
+    color: #ffffff;
+    padding-top: 25px;
+    margin: 0 5px;
+}
+
+
+#svg_cont {
+position: relative;
+    width: 360px;
+height: 110px;
+margin: 40vh auto 0 auto;
+}
+#svg-canvas {
+position: relative;
+    width: 360px;
+height: 110px;
+}
+.title {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: draw 5s linear forwards;
+    -webkit-animation: draw 1s linear forwards;
+    -moz-animation: draw 1s linear forwards;
+    -o-animation: draw 1s linear forwards;
+    font-weight: bold;
+    font-family: Amatic SC;
+    -inkscape-font-specification: Amatic SC Bold"
+}
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+@-webkit-keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@-moz-keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+@-o-keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
 }

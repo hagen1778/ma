@@ -1,65 +1,265 @@
 <div class="pageContainer">
 
-    <!--<button class="filter" data-filter=".web">Category 1</button>-->
-    <!--<button class="filter" data-filter=".illustration">Category 2</button>-->
+<!--<button class="filter" data-filter=".web">Category 1</button>-->
+<!--<button class="filter" data-filter=".illustration">Category 2</button>-->
 
 
-    <!--    <div class="filter-options btn-group" ng-controller="ShuffleController">
-            <button class='btn btn--warning'
-                    ng-repeat="button in buttons"
-                    ng-click="shuffleFilter(button.datagroup);"
-                    ng-class="activeDatagroup==button.datagroup ? 'active' : ''">
-                {{button.title}}
-            </button>
-        </div>-->
+<!--    <div class="filter-options btn-group" ng-controller="ShuffleController">
+        <button class='btn btn--warning'
+                ng-repeat="button in buttons"
+                ng-click="shuffleFilter(button.datagroup);"
+                ng-class="activeDatagroup==button.datagroup ? 'active' : ''">
+            {{button.title}}
+        </button>
+    </div>-->
 
-    <!--    <div class="filter-options btn-group" ng-controller="ShuffleController">
-            <button class='filter' data-filter=".{{button.datagroup}}"
-                    ng-repeat="button in buttons">
-                {{button.title}}
-            </button>
-            <br>
-        </div>-->
+<!--    <div class="filter-options btn-group" ng-controller="ShuffleController">
+        <button class='filter' data-filter=".{{button.datagroup}}"
+                ng-repeat="button in buttons">
+            {{button.title}}
+        </button>
+        <br>
+    </div>-->
 
-    <div class="filter-options btn-group">
-        <button class="filter" data-filter="all">
-            view all
-        </button>
-        <button class="filter" data-filter=".web">
-            web design
-        </button>
-        <button class="filter" data-filter=".graphic">
-            graphic design
-        </button>
-        <button class="filter" data-filter=".illustration">
-            illustration
-        </button>
+<div class="filter-options btn-group robotolight">
+    <button class="filter" data-filter="all">
+        view all
+    </button>
+    <button class="filter" data-filter=".web">
+        web design
+    </button>
+    <button class="filter" data-filter=".graphic">
+        graphic design
+    </button>
+    <button class="filter" data-filter=".illustration">
+        illustration
+    </button>
+</div>
+
+<div id="grid" class="row-fluid" shuffle>
+    <div class="mix web masked">
+        <img src="http://vestride.github.io/Shuffle/img/pumpkin.png"/>
+        <a href="#/works/work1">
+            <div class="mask">
+                <span class='cross'></span>
+
+                <div class='info'>
+                    <h2>Illustration Name</h2>
+
+                    <h3>Illustration</h3>
+                </div>
+            </div>
+        </a>
     </div>
+    <div class="mix illustration masked">
+        <img src="http://vestride.github.io/Shuffle/img/tennis-ball.png"/>
+        <a href="#/works/work1">
+            <div class="mask">
+                <span class='cross'></span>
 
-    <div id="grid" class="row-fluid" shuffle>
-        <div class="mix web"><img
-                src="http://vestride.github.io/Shuffle/img/pumpkin.png"/></div>
-        <div class="mix illustration"><img
-                src="http://vestride.github.io/Shuffle/img/tennis-ball.png"/></div>
-        <div class="mix graphic"><img
-                src="http://vestride.github.io/Shuffle/img/tennis-ball.png"/></div>
-        <div class="mix illustration"><img src="http://vestride.github.io/Shuffle/img/imac.png"/>
-        </div>
-        <div class="mix illustration"><img
-                src="http://vestride.github.io/Shuffle/img/master-chief.png"/></div>
-        <div class="mix graphic"><img
-                src="http://vestride.github.io/Shuffle/img/master-chief.png"/></div>
-        <div class="mix illustration"><img
-                src="http://vestride.github.io/Shuffle/img/master-chief.png"/></div>
-        <div class="mix illustration"><img src="http://vestride.github.io/Shuffle/img/es-blue.png"/>
-        </div>
-        <div class="mix illustration"><img src="http://vestride.github.io/Shuffle/img/es-blue.png"/>
-        </div>
-        <div class="mix graphic"><img src="http://vestride.github.io/Shuffle/img/pumpkin.png"/>
-        </div>
-        <div class="mix web"><img src="http://vestride.github.io/Shuffle/img/pumpkin.png"/>
-        </div>
-        <div class="mix web"><img
-                src="http://vestride.github.io/Shuffle/img/master-chief.png"/></div>
+                <div class='info'>
+                    <h2>Illustration Name</h2>
+
+                    <h3>Illustration</h3>
+                </div>
+            </div>
+        </a>
     </div>
+    <div class="mix graphic masked">
+        <img src="http://vestride.github.io/Shuffle/img/tennis-ball.png"/>
+
+        <div class="mask">
+            <!--<a href="#/works/work1" class="info" title="Full Image">Full Image</a>-->
+            <span class='cross'></span>
+
+            <div class='info'>
+                <h2>Illustration Name</h2>
+
+                <h3>Illustration</h3>
+            </div>
+        </div>
+    </div>
+    <div class="mix illustration masked">
+        <img src="http://vestride.github.io/Shuffle/img/imac.png"/>
+
+        <div class="mask">
+            <!--<a href="#/works/work1" class="info" title="Full Image">Full Image</a>-->
+            <span class='cross'></span>
+
+            <div class='info'>
+                <h2>Illustration Name</h2>
+
+                <h3>Illustration</h3>
+            </div>
+        </div>
+    </div>
+    <div class="mix illustration masked">
+        <img src="http://vestride.github.io/Shuffle/img/master-chief.png"/>
+
+        <div class="mask">
+            <!--<a href="#/works/work1" class="info" title="Full Image">Full Image</a>-->
+            <span class='cross'></span>
+
+            <div class='info'>
+                <h2>Illustration Name</h2>
+
+                <h3>Illustration</h3>
+            </div>
+        </div>
+    </div>
+    <div class="mix graphic masked">
+        <img src="http://vestride.github.io/Shuffle/img/master-chief.png"/>
+
+        <div class="mask">
+            <!--<a href="#/works/work1" class="info" title="Full Image">Full Image</a>-->
+            <span class='cross'></span>
+
+            <div class='info'>
+                <h2>Illustration Name</h2>
+
+                <h3>Illustration</h3>
+            </div>
+        </div>
+    </div>
+    <div class="mix illustration masked">
+        <img src="http://vestride.github.io/Shuffle/img/master-chief.png"/>
+
+        <div class="mask">
+            <!--<a href="#/works/work1" class="info" title="Full Image">Full Image</a>-->
+            <span class='cross'></span>
+
+            <div class='info'>
+                <h2>Illustration Name</h2>
+
+                <h3>Illustration</h3>
+            </div>
+        </div>
+    </div>
+    <div class="mix illustration masked">
+        <img src="http://vestride.github.io/Shuffle/img/es-blue.png"/>
+
+        <div class="mask">
+            <!--<a href="#/works/work1" class="info" title="Full Image">Full Image</a>-->
+            <span class='cross'></span>
+
+            <div class='info'>
+                <h2>Illustration Name</h2>
+
+                <h3>Illustration</h3>
+            </div>
+        </div>
+    </div>
+    <div class="mix illustration masked">
+        <img src="http://vestride.github.io/Shuffle/img/es-blue.png"/>
+
+        <div class="mask">
+            <!--<a href="#/works/work1" class="info" title="Full Image">Full Image</a>-->
+            <span class='cross'></span>
+
+            <div class='info'>
+                <h2>Illustration Name</h2>
+
+                <h3>Illustration</h3>
+            </div>
+        </div>
+    </div>
+    <div class="mix graphic masked">
+        <img src="http://vestride.github.io/Shuffle/img/pumpkin.png"/>
+
+        <div class="mask">
+            <!--<a href="#/works/work1" class="info" title="Full Image">Full Image</a>-->
+            <span class='cross'></span>
+
+            <div class='info'>
+                <h2>Illustration Name</h2>
+
+                <h3>Illustration</h3>
+            </div>
+        </div>
+    </div>
+    <div class="mix web masked">
+        <img src="http://vestride.github.io/Shuffle/img/pumpkin.png"/>
+
+        <div class="mask">
+            <!--<a href="#/works/work1" class="info" title="Full Image">Full Image</a>-->
+            <span class='cross'></span>
+
+            <div class='info'>
+                <h2>Illustration Name</h2>
+
+                <h3>Illustration</h3>
+            </div>
+        </div>
+    </div>
+    <div class="mix web masked">
+        <img src="http://vestride.github.io/Shuffle/img/master-chief.png"/>
+
+        <div class="mask">
+            <!--<a href="#/works/work1" class="info" title="Full Image">Full Image</a>-->
+            <span class='cross'></span>
+
+            <div class='info'>
+                <h2>Illustration Name</h2>
+
+                <h3>Illustration</h3>
+            </div>
+        </div>
+    </div>
+    <div class="mix web masked">
+        <img src="http://vestride.github.io/Shuffle/img/master-chief.png"/>
+
+        <div class="mask">
+            <!--<a href="#/works/work1" class="info" title="Full Image">Full Image</a>-->
+            <span class='cross'></span>
+
+            <div class='info'>
+                <h2>Illustration Name</h2>
+
+                <h3>Illustration</h3>
+            </div>
+        </div>
+    </div>
+    <div class="mix web masked">
+        <img src="http://vestride.github.io/Shuffle/img/master-chief.png"/>
+
+        <div class="mask">
+            <!--<a href="#/works/work1" class="info" title="Full Image">Full Image</a>-->
+            <span class='cross'></span>
+
+            <div class='info'>
+                <h2>Illustration Name</h2>
+
+                <h3>Illustration</h3>
+            </div>
+        </div>
+    </div>
+    <div class="mix web masked">
+        <img src="http://vestride.github.io/Shuffle/img/master-chief.png"/>
+
+        <div class="mask">
+            <!--<a href="#/works/work1" class="info" title="Full Image">Full Image</a>-->
+            <span class='cross'></span>
+
+            <div class='info'>
+                <h2>Illustration Name</h2>
+
+                <h3>Illustration</h3>
+            </div>
+        </div>
+    </div>
+    <div class="mix web masked">
+        <img src="http://vestride.github.io/Shuffle/img/master-chief.png"/>
+
+        <div class="mask">
+            <!--<a href="#/works/work1" class="info" title="Full Image">Full Image</a>-->
+            <span class='cross'></span>
+
+            <div class='info'>
+                <h2>Illustration Name</h2>
+
+                <h3>Illustration</h3>
+            </div>
+        </div>
+    </div>
+</div>
 </div>

@@ -10,8 +10,12 @@
     <script src="assets/js/app.js"></script>
 </head>
 <body  class="background">
-<div class="container" ng-controller = "PageController">
 
+<div class="container" ng-controller = "PageController" >
+    <!--<a scroll ng-class="{show:boolChangeClass}" class="up robotolight">UP</a>-->
+    <div ng-class="{show:boolChangeClass}" scroll scrolltop class="stl_bg" ng-style="style()">
+        <nobr class="stl_text robotolight">UP</nobr>
+    </div>
     <div id = "navBoxTop" class = 'nav'>
         <ul class="nav-pills robotolight">
             <li ng-class="{active:isActive('/{{ item.path }}')}" ng-repeat="item in tabs">
@@ -20,9 +24,9 @@
         </ul>
     </div>
 
-    <div ng-view></div>
+    <div id = 'container' ng-view></div>
 
-    <div id = "navBoxBot" class = 'nav' ng-show="!isActive('/')">
+    <div id = "navBoxBot" class = 'nav' ng-show="!isActive('/')" >
         <ul class="nav-pills robotolight">
             <li ng-class="{active:isActive('/{{ item.path }}')}" ng-repeat="item in tabs">
                 <a href="#/{{item.path}}">{{ item.title }}</a>
@@ -46,6 +50,7 @@
     <div id='para3' class='cPara floating' ></div>
     <div id='para4' class='cPara floating' ></div>
     -->
+
 </div>
 
 </body>

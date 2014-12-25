@@ -435,7 +435,7 @@
 			var self = this,
 				filters = $.MixItUp.prototype._bound._filter,
 				sorts = $.MixItUp.prototype._bound._sort;
-			
+
 			self._execAction('_bindHandlers', 0);
 
 			if(self.controls.live){
@@ -444,16 +444,17 @@
 						self._processClick($(this), 'sort');
 					})
 					.on('click.mixItUp.'+self._id, self.selectors.filter, function(){
+                        console.log('here');
 						self._processClick($(this), 'filter');
 					});
 			} else {
 				self._$sortButtons = $(self.selectors.sort);
 				self._$filterButtons = $(self.selectors.filter);
-				
+
 				self._$sortButtons.on('click.mixItUp.'+self._id, function(){
 					self._processClick($(this), 'sort');
 				});
-				
+
 				self._$filterButtons.on('click.mixItUp.'+self._id, function(){
 					self._processClick($(this), 'filter');
 				});
@@ -473,15 +474,15 @@
 		 */
 		
 		_processClick: function($button, type){
-
 			var self = this,
 				trackClick = function($button, type, off){
 					var proto = $.MixItUp.prototype;
 						
 					proto._handled['_'+type][self.selectors[type]] = (proto._handled['_'+type][self.selectors[type]] === undf) ? 
 						1 : 
-						proto._handled['_'+type][self.selectors[type]] + 1;
+						proto._handled['_'+type][self.selectors[type]];
 
+                    console.log(proto._handled['_'+type])
 					if(proto._handled['_'+type][self.selectors[type]] === proto._bound['_'+type][self.selectors[type]]){
 						$button[(off ? 'remove' : 'add')+'Class'](self.controls.activeClass);
 						delete proto._handled['_'+type][self.selectors[type]];
@@ -1614,7 +1615,6 @@
 		
 		_execFilter: function(methodName, value, args){
 			var self = this;
-			
 			if(!self._filters.isEmptyObject && self._filters.hasOwnProperty(methodName)){
 				for(var key in self._filters[methodName]){
 					return self._filters[methodName][key].call(self, args);
@@ -1965,7 +1965,6 @@
 			}
 			
 			self._execAction('destroy', 1, arguments);
-			
 			delete $.MixItUp.prototype._instances[self._id];
 		}
 		
