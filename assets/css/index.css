@@ -13,6 +13,13 @@ body, p, ul, ol, dl, textarea, input {
     /*max-width: 1280px;*/
     /*min-width: 980px;*/
 }
+html{
+ /*   background: url("../img/waves.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;*/
+}
 
 /* ----- FONTS ----- */
 @font-face {
@@ -386,15 +393,19 @@ body {
 
 #navBoxTop {
     top: 30px;
-
+    height: 50px;
+    position: relative;
     width: 400px;
     left: 50%;
     margin-left: -200px;
 }
 
 #navBoxBot {
-    bottom: 110px;
-    width: 100%;
+    bottom: 155px;
+    position: relative;
+    width: 400px;
+    left: 50%;
+    margin-left: -200px;
 }
 .nav {
     position: absolute;
@@ -406,27 +417,66 @@ body {
 }
 
 .nav li {
+    position: absolute;
     display: inline-block;
     color: white;
-    margin: 0 8px;
-    font-size: 14px;
+    top:30px;
+    /*margin: 0 20px;*/
+    font-size: 16px;
+    transform: 	translateY(-50%);
+
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+}
+.nav li:nth-child(1){
+    left:30px;
+}
+
+.nav li:nth-child(2){
+     left: 110px;
+}
+.nav li:nth-child(3){
+    left:160px;
+}
+.nav li.active:nth-child(3){
+    /*left:155px;*/
+}
+.nav li:nth-child(4){
+    left:265px;
+}
+.nav li:nth-child(5){
+    left:320px;
+}
+.nav li:last-child{
+    display: none;
 }
 
 .nav li.active a{
     font-size: 30px;
+    font-weight: bold;
+}
+.nav li.active a{
+    font-size: 20px;
 }
 
-.nav li:after {
-    margin-left: 8px;
+/*.nav li:after {
+    margin-left: 20px;
+    font: 16px;
     content: "/";
 }
 
 .nav li:last-child:after {
     content: "";
     margin: 0;;
-}
+}*/
 
 .nav li a {
+    /*-webkit-transition: font-size 0.3s;
+    -moz-transition: font-size 0.3s;
+    -o-transition:  font-size 0.3s;
+    transition: font-size 0.3s;*/
     color: white;
     text-decoration: none;
     text-transform: uppercase;
@@ -442,8 +492,8 @@ body {
     text-align: center;
 }
 #social a {
-    width: 37px;
-    height: 37px;
+    width: 22px;
+    height: 21px;
     display: inline-block;
     box-shadow: none;
     border: none;
@@ -451,11 +501,29 @@ body {
     background-repeat: no-repeat;
     text-decoration: none;
 
-    margin: 0 5px;
+    margin: 0 4px;
     color: #fff !important;
+}
+.facebook-icon,.g-plus-icon,.mail-icon {
+    transition: background-image 0.3s;
 }
 .facebook-icon {
     background-image: url("../img/fb_icon.png");
+}
+.facebook-icon:hover {
+    background-image: url("../img/fb_icon_hover.png");
+}
+.g-plus-icon{
+    background-image: url("../img/g_plus_icon.png");
+}
+.g-plus-icon:hover{
+    background-image: url("../img/g_plus_icon_hover.png");
+}
+.mail-icon{
+    background-image: url("../img/icon_mail.png");
+}
+.mail-icon:hover{
+    background-image: url("../img/icon_mail_hover.png");
 }
 /* FOOTER */
 #footer {
@@ -467,7 +535,7 @@ body {
     font-size: 16px;
     text-align: center;
     color: white;
-    
+
     border-top: 1px solid rgba(255, 255, 255, 0.50);
     -webkit-background-clip: padding-box; /* for Safari */
     background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
@@ -479,7 +547,8 @@ body {
     max-width: 1100px;
     min-width: 940px;
     width: 100%;
-    margin: 100px auto 140px auto;
+    /*height: 100vh;*/
+    margin: 50px auto 140px auto;
     padding-bottom: 30px;
 }
 .pageContainer{
@@ -536,6 +605,10 @@ padding-bottom: 15px;
 }
 #grid .mix{
     display: none;
+    opacity: 0;
+    /*-webkit-transform: translateY(50px);
+    transform: translateY(50px);*/
+    /*margin-top: 50px;*/
 }
 #grid .masked{
     width: 25%;
@@ -554,7 +627,20 @@ padding-bottom: 15px;
     border: none;
     vertical-align: top;
 }
+.loaded{
+    -webkit-animation: fadeIn 0.65s ease forwards;
+    animation: fadeIn 0.65s ease forwards;
+}
 
+@-webkit-keyframes fadeIn {
+    0% { }
+    100% { opacity: 1;}
+}
+
+@keyframes fadeIn {
+    0% { }
+    100% { opacity: 1;}
+}
 /* gallery */
 .filter-options{
     text-align: center;
@@ -638,11 +724,16 @@ button.active{
     top: -22px;
 }
 
+
+.up.show{
+    display: block;
+}
 .stl_bg{
     height: 100%;
     width: 30px;
     position: fixed;
     cursor: pointer;
+    /*padding: 0 5px;*/
     display: none;
 }
 .stl_bg:hover{
@@ -651,58 +742,53 @@ button.active{
 .stl_bg.show{
     display: block;
 }
+
 .stl_text{
     position: absolute;
     top: 50%;
-    font-size: 14px;
-    background: url(../img/arrow_up.png) top center no-repeat;
-    color: #ffffff;
     padding-top: 25px;
     margin: 0 5px;
 }
+.stl_text:after{
+    content: "up";
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #ffffff;
+}
+.rotate .stl_text:after{
+    content: "";
+}
+.stl_text:before{
+    content: "";
+    background: url(../img/arrow_up.png) top center no-repeat;
+    position: absolute;
+    top: 0;
+    width: 17px;
+    height: 22px;
+}
+.rotate .stl_text:before{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+#randomCurves{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: url("../img/waves.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
-/*
+.stars {
+    z-index: 9999; position: absolute; /* width: 420em; height: 70em; */
+    background-color: black;
+    transform:translate3D(0em, 0em, 0); animation: stars 21s ease; transform-style: preserve-3d;
 
-#svg_cont {
-position: relative;
-    width: 360px;
-height: 110px;
-margin: 40vh auto 0 auto;
 }
-#svg-canvas {
-position: relative;
-    width: 360px;
-height: 110px;
-}
-.title {
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
-    animation: draw 5s linear forwards;
-    -webkit-animation: draw 1s linear forwards;
-    -moz-animation: draw 1s linear forwards;
-    -o-animation: draw 1s linear forwards;
-    font-weight: bold;
-    font-family: Amatic SC;
-    -inkscape-font-specification: Amatic SC Bold"
-}
-@keyframes draw {
-    to {
-        stroke-dashoffset: 0;
-    }
-}
-@-webkit-keyframes draw {
-    to {
-        stroke-dashoffset: 0;
-    }
-}
-
-@-moz-keyframes draw {
-    to {
-        stroke-dashoffset: 0;
-    }
-}
-@-o-keyframes draw {
-    to {
-        stroke-dashoffset: 0;
-    }
-}*/

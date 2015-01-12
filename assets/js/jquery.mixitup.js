@@ -493,7 +493,7 @@
 			
 			if(!self._mixing || (self.animation.queue && self._queue.length < self.animation.queueLimit)){
 				self._clicking = true;
-				
+
 				if(type === 'sort'){
 					var sort = $button.attr('data-sort');
 					

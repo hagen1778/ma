@@ -1,0 +1,57 @@
+<!doctype html>
+<html ng-app="MA" >
+<head>
+    <link rel="Stylesheet" type="text/css" href="../../../../ma_t/www/assets/css/index.css"/>
+
+    <script src="../../../../ma_t/www/assets/js/bower_components/angular/angular.min.js"></script>
+    <script src="../../../../ma_t/www/assets/js/bower_components/angular-route/angular-route.js"></script>
+    <script src="../../../../ma_t/www/assets/js/jquery-2.1.1.min.js"></script>
+    <script src="../../../../ma_t/www/assets/js/jquery.mixitup.js"></script>
+    <script src="../../../../ma_t/www/assets/js/app.js"></script>
+</head>
+<body  class="background">
+
+<div class="container" ng-controller = "PageController" >
+    <!--<a scroll ng-class="{show:boolChangeClass}" class="up robotolight">UP</a>-->
+    <div ng-class="{show:boolChangeClass}" scroll scrolltop class="stl_bg" ng-style="style()">
+        <nobr class="stl_text robotolight">UP</nobr>
+    </div>
+    <div id = "navBoxTop" class = 'nav'>
+        <ul class="nav-pills robotolight">
+            <li ng-class="{active:isActive('/{{ item.path }}')}" ng-repeat="item in tabs">
+                <a href="#/{{item.path}}">{{ item.title }}</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id = 'container' ng-view></div>
+
+    <div id = "navBoxBot" class = 'nav' ng-show="!isActive('/')" >
+        <ul class="nav-pills robotolight">
+            <li ng-class="{active:isActive('/{{ item.path }}')}" ng-repeat="item in tabs">
+                <a href="#/{{item.path}}">{{ item.title }}</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id = "social">
+        <a class="facebook-icon" title="Facebook" target="_blank" service="facebook" href="#">&nbsp;</a>
+        <a class="facebook-icon" title="Facebook" target="_blank" service="facebook" href="#">&nbsp;</a>
+        <a class="facebook-icon" title="Facebook" target="_blank" service="facebook" href="#">&nbsp;</a>
+    </div>
+
+    <div id = "footer" class = 'robotolight'>
+        © 2014 MA. Trademarks and brands are the property of their respective owners.
+    </div>
+
+    <!--
+    <div id='para1' class='cPara floating' ></div>
+    <div id='para2' class='cPara floating' ></div>
+    <div id='para3' class='cPara floating' ></div>
+    <div id='para4' class='cPara floating' ></div>
+    -->
+
+</div>
+
+</body>
+</html>
