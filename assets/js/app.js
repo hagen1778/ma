@@ -624,14 +624,4 @@
         }
     });
 
-    app.directive('starfall', function () {
-        return {
-            restrict: 'A',
-            link: function (scope, $elm) {
-                var shootingStarObj = new ShootingStar( "body" );
-                shootingStarObj.launch();
-            }
-        }
-    });
-
 })();
