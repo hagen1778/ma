@@ -26,7 +26,7 @@
         //$locationProvider.html5Mode(true);
     });
 
-    app.controller('PageController', function ($scope, $location) {
+    app.controller('PageController', function ($http, $scope, $location) {
         $scope.tabs = [
             {title: 'ma', path: ''},
             {title: 'works', path: 'works'},
@@ -37,6 +37,16 @@
         $scope.isActive = function (route) {
             return route === $location.path();
         }
+
+        /*$http.get('http://yiirest/api/web/v1/works').
+            success(function(data) {
+              $scope.lotdata = data;
+            }); */
+
+      /*  $http.get('http://yiirest/backend/web/work/all').
+            success(function(data) {
+              $scope.lotdata = data;
+            });*/
     });
 
     app.controller('ShuffleController', function ($scope) {
@@ -573,7 +583,7 @@
             scope.getWindowDimensions = function () {
                 return {
                     'w': $('body').width(),
-                    'container': $('#container').width(),
+                    'container': $('#container').width()
                 };
             };
 
@@ -588,6 +598,7 @@
                 };
                 scope.getMenuPosition = function () {
                     var adjustment = $(document).height() > $(window).height() ? 9 : 0;
+                    adjustment += 10;
                     return {
                         'left': ((scope.windowWidth)) / 2 + adjustment + 'px'
                     };
