@@ -1,21 +1,31 @@
 <!doctype html>
 <html ng-app="MA" >
 <head>
+	<title>MA</title>
+    <link rel="icon"
+          type="image/png"
+          href="fav.png">
+
     <link rel="Stylesheet" type="text/css" href="assets/css/index.css"/>
 
     <script src="assets/js/bower_components/angular/angular.min.js"></script>
     <script src="assets/js/bower_components/angular-route/angular-route.js"></script>
-    <script src="assets/js/jquery-2.1.1.min.js"></script>
-    <script src="assets/js/jquery.mixitup.js"></script>
-    <script src="assets/js/angular-inview.js"></script>
+    <script src="assets/js/src/jquery-2.1.1.min.js"></script>
+    <script src="assets/js/src/jquery.mixitup.js"></script>
+    <script src="assets/js/src/angular-inview.js"></script>
     <script src="assets/js/app.js"></script>
 
 </head>
-<body  class="background">
+<body  class="background noselect">
 
 <div class="container" ng-controller = "PageController" >
 
     <!--<a scroll ng-class="{show:boolChangeClass}" class="up robotolight">UP</a>-->
+	<!--
+	<div id = 'smallLogo'>
+		<img src="assets/img/mamain.png">
+	</div>
+	-->
     <div ng-class="{show:boolChangeClass}" scroll scrolltop class="stl_bg" ng-style="getScrollTopWidth()">
         <nobr class="stl_text robotolight"></nobr>
     </div>
@@ -32,7 +42,7 @@
 
     <div id = 'container' ng-view></div>
 
-    <div id = "navBoxBot" class = 'nav' ng-style="getMenuPosition()">
+    <div id = "navBoxBot" class = 'nav' ng-style="getMenuPosition()" ng-class="{hidden:isActive('/')}">
         <ul class="nav-pills robotolight">
             <li ng-class="{active:isActive('/{{ item.path }}')}" ng-repeat-start="item in tabs">
                 <a href="#/{{item.path}}">{{ item.title }}</a>
@@ -46,7 +56,7 @@
     <div id = "social">
         <a class="facebook-icon" title="Facebook" target="_blank" service="facebook" href="https://www.facebook.com/nastia.malyushevska">&nbsp;</a>
         <a class="g-plus-icon" title="G+" target="_blank" service="google" href="https://plus.google.com/u/0/103527619556104384500/posts">&nbsp;</a>
-        <a class="mail-icon" title="Facebook" target="_top" service="mail" href="mailto:malyushevska@gmail.com">&nbsp;</a>
+        <a class="mail-icon" title="Email" target="_top" service="mail" href="mailto:malyushevska@gmail.com">&nbsp;</a>
     </div>
 
     <div id = "footer" class = 'robotolight'>

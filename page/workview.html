@@ -1,0 +1,13 @@
+<div class="pageContainer pink" ng-controller = "WorkController">
+
+    <a href='#/works' class="back robotolight">back</a>
+
+    <section>
+        <h2>{{curwork.title}}</h2>
+
+        <h3>{{getCategory(curwork.category)}}</h3>
+    </section>
+
+    <div ng-include class = 'workview'  src="'/page/works/' + curwork.template + '.html'"></div>
+
+</div>

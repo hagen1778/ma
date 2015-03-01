@@ -1,20 +1,20 @@
 <div class="pageContainer">
     <div class="filter-options btn-group robotolight">
-        <button class="filter" data-filter="all">
+        <button class="filter" data-filter="all" ng-click="repeatclick()">
             view all
         </button>
-        <button class="filter" data-filter=".web">
-            web design
+        <button class="filter" data-filter=".web" ng-click="repeatclick()">
+            web/ui design
         </button>
-        <button class="filter" data-filter=".graphic">
+        <button class="filter" data-filter=".graphic" ng-click="repeatclick()">
             graphic design
         </button>
-        <button class="filter" data-filter=".illustration">
+        <button class="filter" data-filter=".illustration" ng-click="repeatclick()">
             illustration
         </button>
     </div>
 
-    <div id="grid" ng-controller="ShuffleController" class="row-fluid" shuffle in-view-container>
+    <div id="grid" ng-controller="WorkController" class="row-fluid" shuffle in-view-container filter="activeFilter">
         <div ng-repeat="work in works"
              class="mix masked {{work.category}}"
              in-view="$inview&&loadImg($event)"
@@ -22,14 +22,14 @@
                 >
             <img class='lazyload' src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                  datasrc="{{work.img}}"/>
-            <a href="#/works/work1">
+            <a href="{{work.href}}">
                 <div class="mask">
                     <span class='cross'></span>
 
                     <div class='info'>
                         <h2>{{work.title}}</h2>
 
-                        <h3>{{work.desc}}</h3>
+                        <h3>{{getCategory(work.category)}}</h3>
                     </div>
                 </div>
             </a>

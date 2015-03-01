@@ -14,6 +14,7 @@ body, p, ul, ol, dl, textarea, input {
     /*min-width: 980px;*/
 }
 
+
 html, body {
     height: 100%;
     min-width: 380px;
@@ -69,6 +70,9 @@ p {
     font-size: 14px;
     margin: 15px 35px;
 }
+
+.uppercase{text-transform:uppercase;}
+.lowercase{text-transform:lowercase;}
 
 /* ----- BLUEPRINT ----- */
 /* container_width/#divisions - margin */
@@ -275,6 +279,13 @@ body {
     left: 10px;
     top: 0px;
 }
+#smallLogo{
+	position: absolute;
+	width:100px;
+}
+#smallLogo img{
+	max-width: 75px;
+}
 
 .jscode {
     background-color: white;
@@ -288,19 +299,29 @@ body {
 }
 
 #titlebox {
-    position: absolute;
+    /*position: absolute;*/
 
     margin: 0 auto;
-    top: 50%;
-    left: 50%;
-    width: 380px;
-    height: 500px;
-    margin-left: -190px;
-    margin-top: -250px;
+    /*top: 50%;*/
+    /*left: 50%;*/
+    width: 20%;
+    /*height: 500px;*/
+    /*margin-left: -190px;*/
+    /*margin-top: -250px;*/
 
     text-align: center;
     font-family: arial;
     font-size: 17px;
+    position: absolute;
+    top:30%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+}
+#logo{
+    max-width: 100%;
 }
 
 #codebox {
@@ -439,15 +460,15 @@ body {
 }
 
 .nav li:nth-child(1) {
-    left: 30px;
+    left: 120px;
 }
 
 .nav li:nth-child(2) {
-    left: 110px;
+    left: 205px;
 }
 
 .nav li:nth-child(3) {
-    left: 160px;
+    left: 260px;
 }
 
 .nav li.active:nth-child(3) {
@@ -548,6 +569,20 @@ body {
     background-image: url("../img/icon_mail_hover.png");
 }
 
+#signature{
+    position: absolute;
+    width: 100%;
+    bottom: 100px;
+    padding: 8px 0 10px 0;
+    text-align: center;
+
+    left: 0;
+}
+#signature p{
+    font-size: 16px;
+    color: white;
+}
+
 /* FOOTER */
 #footer {
     position: absolute;
@@ -578,11 +613,16 @@ body {
 }
 
 .pageContainer {
-    padding-bottom: 15px;
+    padding-bottom: 75px;
+	padding-top: 1px;
 }
 
 .pink {
-    background-color: rgba(253, 245, 249, 0.70);
+    background-color: rgba(255, 255, 255, 1);
+}
+.pink a{
+	color: rgb(237, 47, 119);
+	text-decoration: none;
 }
 
 .imgHeader {
@@ -767,9 +807,9 @@ button.active {
     text-transform: uppercase;
     text-decoration: none;
     padding-left: 30px;
-    color: white;
+    color: white !important;
     font-size: 14px;
-    top: -22px;
+    margin-top: -25px;
 }
 
 .up.show {
@@ -849,4 +889,37 @@ button.active {
     animation: stars 21s ease;
     transform-style: preserve-3d;
 
+}
+.fullwidth{
+	width:100%;
+    margin: 10px 0;
+}
+.halfwidth{
+    width: 50%;
+    margin: 10px 0;
+}
+._80width{
+       width: 80%;
+       margin: 10px 0;
+   }
+._70width{
+       width: 70%;
+       margin: 10px 0;
+   }
+.centered{
+    margin: 0 auto;
+}
+.hidden{
+    display: none;
+}
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.workview section{
+    padding-top: 50px;
 }
