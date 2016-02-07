@@ -326,7 +326,7 @@
         $scope.tabs = [
             {title: 'ma', path: ''},
             {title: 'works', path: 'works'},
-//            {title: 'cv', path: 'cv'}
+            {title: 'cv', path: 'cv'}
 //            {title: 'contact', path: 'contact'}
         ];
 
@@ -423,7 +423,7 @@
                 };
                 scope.getMenuPosition = function () {
                     var adjustment = $(document).height() > $(window).height() ? 9 : 0;
-                    adjustment -= 30;
+                    adjustment -= 95;
                     return {
                         'left': ((scope.windowWidth)) / 2 + adjustment + 'px'
                     };

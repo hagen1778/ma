@@ -18,6 +18,7 @@ body, p, ul, ol, dl, textarea, input {
 html, body {
     height: 100%;
     min-width: 380px;
+    min-height: 690px;
 }
 
 /* ----- FONTS ----- */
@@ -36,6 +37,11 @@ html, body {
     src: url('../fonts/ROBOTO-MEDIUM.TTF');
 }
 
+@font-face {
+    font-family: 'Roboto-Thin';
+    src: url('../fonts/Roboto-Thin.ttf');
+}
+
 .leaguegothic {
     font-family: 'LeagueGothic';
 }
@@ -46,6 +52,9 @@ html, body {
 
 .robotomedium {
     font-family: 'Roboto-Medium';
+}
+.robotothin {
+    font-family: 'Roboto-Thin';
 }
 
 h2 {
@@ -69,6 +78,7 @@ p {
     font-family: 'Roboto-Light';
     font-size: 14px;
     margin: 15px 35px;
+    line-height: 20px;
 }
 
 .uppercase{text-transform:uppercase;}
@@ -277,8 +287,15 @@ body {
 
 #logo {
     left: 10px;
-    top: 0px;
+    top: 0;
+    max-width: 100%;
+    font-size: 200px;
 }
+
+#logo .robotothin{
+    letter-spacing: 20px;
+}
+
 #smallLogo{
 	position: absolute;
 	width:100px;
@@ -299,16 +316,8 @@ body {
 }
 
 #titlebox {
-    /*position: absolute;*/
-
     margin: 0 auto;
-    /*top: 50%;*/
-    /*left: 50%;*/
-    width: 20%;
-    /*height: 500px;*/
-    /*margin-left: -190px;*/
-    /*margin-top: -250px;*/
-
+    /*width: 20%;*/
     text-align: center;
     font-family: arial;
     font-size: 17px;
@@ -317,11 +326,6 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-
-    margin: auto;
-}
-#logo{
-    max-width: 100%;
 }
 
 #codebox {
@@ -468,20 +472,21 @@ body {
 }
 
 .nav li:nth-child(3) {
-    left: 260px;
+    left: 255px;
 }
 
 .nav li.active:nth-child(3) {
-    /*left:155px;*/
+    left:255px;
 }
 
 .nav li:nth-child(4) {
-    left: 265px;
+    left: 370px;
 }
 
 .nav li:nth-child(5) {
-    left: 320px;
+    left: 420px;
 }
+
 
 .nav li:last-child {
     display: none;
@@ -919,6 +924,9 @@ button.active {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+#container section{
+    margin-top: 40px;
 }
 .workview section{
     padding-top: 50px;
