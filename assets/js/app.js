@@ -429,7 +429,7 @@
                 href: '#/works/pop_woman',
                 img: '../assets/img/pop_woman/00-prwe.jpg'
             }, {
-                title: 'Dress Collection',
+                title: 'Dresses Collection',
                 desc: 'Illustration',
                 category: 'illustration',
                 href: '#/works/dress_collection',
