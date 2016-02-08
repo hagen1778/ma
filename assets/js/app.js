@@ -318,7 +318,86 @@
                 category: 'illustration',
                 href: '#/works/knowledge',
                 img: '../assets/img/hlpl_prw.jpg'
-            }
+            },
+            {
+                title: 'Android UI template',
+                desc: 'Illustration',
+                category: 'illustration',
+                href: '#/works/android',
+                img: '../assets/img/android/material-prw.jpg'
+            },{
+                title: 'Little ones',
+                desc: 'Illustration',
+                category: 'illustration',
+                href: '#/works/little_ones',
+                img: '../assets/img/little_ones/4_Babies_Illustration-prw.jpg'
+            },{
+                title: '40 Vector Snowflakes Collection',
+                desc: 'GRAPHIC DESIGN',
+                category: 'graphic',
+                href: '#/works/40_vectors',
+                img: '../assets/img/40_vectors/40_Vector_Snowflakes_Collection-prw.jpg'
+            },{
+                title: 'Shopping logo template',
+                desc: 'GRAPHIC DESIGN',
+                category: 'graphic',
+                href: '#/works/shopping_logo',
+                img: '../assets/img/shopping_logo/00-prw.jpg'
+            },{
+                title: 'Dream Bike',
+                desc: 'Illustration',
+                category: 'illustration',
+                href: '#/works/dream_bike',
+                img: '../assets/img/dream_bike/Bike_Illustration-prw.jpg'
+            },{
+                title: 'First Dating',
+                desc: 'Illustration',
+                category: 'illustration',
+                href: '#/works/first_dating',
+                img: '../assets/img/first_dating/Boy_and_Girl_Valentines_Dating-prw.jpg'
+            },{
+                title: 'Coffee and Croissant',
+                desc: 'Illustration',
+                category: 'illustration',
+                href: '#/works/coffee_croissant',
+                img: '../assets/img/coffee_croissant/wmn_prw00.jpg'
+            },{
+                title: 'Decorative Heart',
+                desc: 'Illustration',
+                category: 'illustration',
+                href: '#/works/decorative_heart',
+                img: '../assets/img/decorative_heart/wmn_prw00.jpg'
+            },{
+                title: 'Fast food icons set',
+                desc: 'GRAPHIC DESIGN',
+                category: 'graphic',
+                href: '#/works/fast_food',
+                img: '../assets/img/fast_food/wmn_prw00.jpg'
+            },{
+                title: 'Pop Art Woman',
+                desc: 'Illustration',
+                category: 'illustration',
+                href: '#/works/pop_woman',
+                img: '../assets/img/pop_woman/00-prwe.jpg'
+            },{
+                title: 'Smoothies Mood',
+                desc: 'Illustration',
+                category: 'illustration',
+                href: '#/works/smoothies_mood',
+                img: '../assets/img/smoothies_mood/Smoothies_illustration00-prw.jpg'
+            },{
+                title: 'Dress Collection',
+                desc: 'Illustration',
+                category: 'illustration',
+                href: '#/works/dress_collection',
+                img: '../assets/img/dress_collection/Woman_evening_dresses_collection-prw.jpg'
+            },{
+                title: 'Isometric Alphabet',
+                desc: 'GRAPHIC DESIGN',
+                category: 'graphic',
+                href: '#/works/isometric_alphabet',
+                img: '../assets/img/isometric_alphabet/000-prw.jpg'
+            },
         ]
     });
 
