@@ -37,10 +37,10 @@
             {title: 'graphic design', datagroup: 'graphic'},
             {title: 'illustration', datagroup: 'illustration'}
         ];
-        $scope.getCategory = function(datagroup){
+        $scope.getCategory = function (datagroup) {
             var title = '';
-            $scope.buttons.forEach(function(entry) {
-                if(entry.datagroup == datagroup){
+            $scope.buttons.forEach(function (entry) {
+                if (entry.datagroup == datagroup) {
                     title = entry.title;
                     return;
                 }
@@ -50,8 +50,8 @@
 
         $scope.$on('$routeChangeSuccess', function () {
             var path = $location.url();
-            $scope.works.forEach(function(entry) {
-                if(entry.href == '#'+path){
+            $scope.works.forEach(function (entry) {
+                if (entry.href == '#' + path) {
                     $scope.curwork = entry;
                     $scope.curwork.template = entry.href.substr(entry.href.lastIndexOf('/') + 1);
                     return;
@@ -61,20 +61,117 @@
 
         $scope.works = [
             {
+                title: 'Cluise application',
+                desc: 'WEB/UI DESIGN',
+                category: 'web',
+                href: '#/works/cluise',
+                img: '../assets/img/cluise/mirrow_prw.jpg'
+            },
+            {
+                title: 'Isometric Alphabet',
+                desc: 'GRAPHIC DESIGN',
+                category: 'graphic',
+                href: '#/works/isometric_alphabet',
+                img: '../assets/img/isometric_alphabet/000-prw.jpg'
+            },
+            {
+                title: 'Shopping logo template',
+                desc: 'GRAPHIC DESIGN',
+                category: 'graphic',
+                href: '#/works/shopping_logo',
+                img: '../assets/img/shopping_logo/00-prw.jpg'
+            }, {
+                title: 'Fast food icons set',
+                desc: 'GRAPHIC DESIGN',
+                category: 'graphic',
+                href: '#/works/fast_food',
+                img: '../assets/img/fast_food/wmn_prw00.jpg'
+            }, {
+                title: 'Android UI template',
+                desc: 'Illustration',
+                category: 'illustration',
+                href: '#/works/android',
+                img: '../assets/img/android/material-prw.jpg'
+            },
+            {
+                title: 'Dream Bike',
+                desc: 'Illustration',
+                category: 'illustration',
+                href: '#/works/dream_bike',
+                img: '../assets/img/dream_bike/Bike_Illustration-prw.jpg'
+            },
+            {
+                title: 'Office view',
+                desc: 'Illustration',
+                category: 'illustration',
+                href: '#/works/office_view',
+                img: '../assets/img/office_view/Office_view.jpg'
+            },
+            {
+                title: 'Hexagone smiles',
+                desc: 'WEB/UI DESIGN',
+                category: 'web',
+                href: '#/works/hexagon_smiles',
+                img: '../assets/img/hexagon_smiles/hex-prw.jpg'
+            },
+            {
+                title: 'First Dating',
+                desc: 'Illustration',
+                category: 'illustration',
+                href: '#/works/first_dating',
+                img: '../assets/img/first_dating/Boy_and_Girl_Valentines_Dating-prw.jpg'
+            },
+            {
+                title: '40 Vector Snowflakes Collection',
+                desc: 'GRAPHIC DESIGN',
+                category: 'graphic',
+                href: '#/works/40_vectors',
+                img: '../assets/img/40_vectors/40_Vector_Snowflakes_Collection-prw.jpg'
+            },
+            {
+                title: 'Smoothies Mood',
+                desc: 'Illustration',
+                category: 'illustration',
+                href: '#/works/smoothies_mood',
+                img: '../assets/img/smoothies_mood/Smoothies_illustration00-prw.jpg'
+            },
+            {
+                title: 'Runner theme',
+                desc: 'WEB/UI DESIGN',
+                category: 'web',
+                href: '#/works/runner_theme',
+                img: '../assets/img/runner_theme/rnr_1.jpg'
+            },
+            {
+                title: 'Game Items Collections',
+                desc: 'WEB/UI DESIGN',
+                category: 'web',
+                href: '#/works/weapons',
+                img: '../assets/img/won_prw.jpg'
+            },
+            {
+                title: 'Coffee and Croissant',
+                desc: 'Illustration',
+                category: 'illustration',
+                href: '#/works/coffee_croissant',
+                img: '../assets/img/coffee_croissant/wmn_prw00.jpg'
+            },
+
+            {
                 title: 'Schoolboy',
                 desc: 'Illustjhhohoration',
                 category: 'illustration',
                 href: '#/works/schoolboy',
                 img: '../assets/img/boy_cover.jpg'
             },
-			{
+            {
                 title: 'Scientia Promo',
                 desc: 'WEB/UI DESIGN',
                 category: 'web',
                 href: '#/works/scientia_site',
                 img: '../assets/img/scientia_site/snta_prw.jpg'
             },
-			  {
+            {
                 title: 'Bright Infographic Tools',
                 desc: 'GRAPHIC DESIGN',
                 category: 'graphic',
@@ -95,43 +192,43 @@
                 href: '#/works/rabbit',
                 img: '../assets/img/pen_prw.jpg'
             },
-			{
+            {
                 title: 'Set of Flat',
                 desc: 'Illustration',
                 category: 'illustration',
                 href: '#/works/flat',
                 img: '../assets/img/ils_prw.jpg'
-            },	
-     
-			 {
+            },
+
+            {
                 title: 'Video Drawings',
                 desc: 'Illustration',
                 category: 'illustration',
                 href: '#/works/video',
                 img: '../assets/img/inf_prw.jpg'
             },
-			{
+            {
                 title: 'Portal Shevchenka',
                 desc: 'WEB/UI DESIGN',
                 category: 'web',
                 href: '#/works/portal',
                 img: '../assets/img/portal/tgsh_prw.jpg'
             },
-			   {
+            {
                 title: 'Cartoon Character',
                 desc: 'Illustration',
                 category: 'illustration',
                 href: '#/works/woman',
                 img: '../assets/img/wmn_prw.jpg'
             },
-			 {
+            {
                 title: 'Clear Infographic Tools',
                 desc: 'GRAPHIC DESIGN',
                 category: 'graphic',
                 href: '#/works/clear',
                 img: '../assets/img/inf3_prw.jpg'
             },
-			 {
+            {
                 title: 'Flat Style Timeline',
                 desc: 'GRAPHIC DESIGN',
                 category: 'graphic',
@@ -152,28 +249,22 @@
                 href: '#/works/dress',
                 img: '../assets/img/drs_prw.jpg'
             },
-			{
+            {
                 title: 'Infographic Banner',
                 desc: 'GRAPHIC DESIGN',
                 category: 'graphic',
                 href: '#/works/bnr',
                 img: '../assets/img/banner/bnr_prw.jpg'
             },
-			{
-                title: 'Game Items Collections',
-                desc: 'WEB/UI DESIGN',
-                category: 'web',
-                href: '#/works/weapons',
-                img: '../assets/img/won_prw.jpg'
-            },    
-			{
+
+            {
                 title: 'Call Manager App',
                 desc: 'WEB/UI DESIGN',
                 category: 'web',
                 href: '#/works/call',
                 img: '../assets/img/call/call_prw.jpg'
             },
-            
+
             {
                 title: 'Graphic Girls Caracter',
                 desc: 'Illustration',
@@ -188,14 +279,14 @@
                 href: '#/works/vegetarian',
                 img: '../assets/img/vgtrn_prw.jpg'
             },
-			{
+            {
                 title: 'Chandelier Assesstments',
                 desc: 'WEB/UI DESIGN',
                 category: 'web',
                 href: '#/works/chandellier',
                 img: '../assets/img/chandellier/chnd_prw.jpg'
-            },           
-           
+            },
+
             {
                 title: 'Christmas Infographic Tools',
                 desc: 'GRAPHIC DESIGN',
@@ -203,7 +294,7 @@
                 href: '#/works/christmas',
                 img: '../assets/img/crs_prw.jpg'
             },
-           
+
             {
                 title: 'Gingerbread Man Infographic',
                 desc: 'GRAPHIC DESIGN',
@@ -224,8 +315,8 @@
                 category: 'graphic',
                 href: '#/works/scientia',
                 img: '../assets/img/sdo_prw.jpg'
-            },           
-            
+            },
+
             {
                 title: '5 Coming Soon pages',
                 desc: 'WEB/UI DESIGN',
@@ -248,7 +339,7 @@
                 href: '#/works/juicy',
                 img: '../assets/img/juicy/jc_prw.jpg'
             },
-            
+
             {
                 title: 'Emap System',
                 desc: 'WEB/UI DESIGN',
@@ -276,43 +367,43 @@
                 category: 'web',
                 href: '#/works/sdo',
                 img: '../assets/img/sdo/scn_prw.jpg'
-            },			
-			{
+            },
+            {
                 title: 'In-Art',
                 desc: 'WEB/UI DESIGN',
                 category: 'web',
                 href: '#/works/inart',
                 img: '../assets/img/antique/ant_prw.jpg'
-            },			
-			{
+            },
+            {
                 title: 'Montenegro Consulate',
                 desc: 'WEB/UI DESIGN',
                 category: 'web',
                 href: '#/works/montenegro',
                 img: '../assets/img/montenegro/chrng_prw.jpg'
             },
-			{
+            {
                 title: 'Balcony Garment',
                 desc: 'WEB/UI DESIGN',
                 category: 'web',
                 href: '#/works/balcony',
                 img: '../assets/img/balcony/bg_prw.jpg'
             },
-			{
+            {
                 title: 'Magenta Infographic Tools',
                 desc: 'GRAPHIC DESIGN',
                 category: 'graphic',
                 href: '#/works/magenta',
                 img: '../assets/img/magenta/inf_prw.jpg'
             },
-			{
+            {
                 title: 'Price Tags',
                 desc: 'GRAPHIC DESIGN',
                 category: 'graphic',
                 href: '#/works/price',
                 img: '../assets/img/prs_prw.jpg'
-            },               
-			{
+            },
+            {
                 title: 'Knowledge Museum',
                 desc: 'Illustration',
                 category: 'illustration',
@@ -320,83 +411,47 @@
                 img: '../assets/img/hlpl_prw.jpg'
             },
             {
-                title: 'Android UI template',
-                desc: 'Illustration',
-                category: 'illustration',
-                href: '#/works/android',
-                img: '../assets/img/android/material-prw.jpg'
-            },{
                 title: 'Little ones',
                 desc: 'Illustration',
                 category: 'illustration',
                 href: '#/works/little_ones',
                 img: '../assets/img/little_ones/4_Babies_Illustration-prw.jpg'
-            },{
-                title: '40 Vector Snowflakes Collection',
-                desc: 'GRAPHIC DESIGN',
-                category: 'graphic',
-                href: '#/works/40_vectors',
-                img: '../assets/img/40_vectors/40_Vector_Snowflakes_Collection-prw.jpg'
-            },{
-                title: 'Shopping logo template',
-                desc: 'GRAPHIC DESIGN',
-                category: 'graphic',
-                href: '#/works/shopping_logo',
-                img: '../assets/img/shopping_logo/00-prw.jpg'
-            },{
-                title: 'Dream Bike',
-                desc: 'Illustration',
-                category: 'illustration',
-                href: '#/works/dream_bike',
-                img: '../assets/img/dream_bike/Bike_Illustration-prw.jpg'
-            },{
-                title: 'First Dating',
-                desc: 'Illustration',
-                category: 'illustration',
-                href: '#/works/first_dating',
-                img: '../assets/img/first_dating/Boy_and_Girl_Valentines_Dating-prw.jpg'
-            },{
-                title: 'Coffee and Croissant',
-                desc: 'Illustration',
-                category: 'illustration',
-                href: '#/works/coffee_croissant',
-                img: '../assets/img/coffee_croissant/wmn_prw00.jpg'
-            },{
+            }, {
                 title: 'Decorative Heart',
                 desc: 'Illustration',
                 category: 'illustration',
                 href: '#/works/decorative_heart',
                 img: '../assets/img/decorative_heart/wmn_prw00.jpg'
-            },{
-                title: 'Fast food icons set',
-                desc: 'GRAPHIC DESIGN',
-                category: 'graphic',
-                href: '#/works/fast_food',
-                img: '../assets/img/fast_food/wmn_prw00.jpg'
-            },{
+            }, {
                 title: 'Pop Art Woman',
                 desc: 'Illustration',
                 category: 'illustration',
                 href: '#/works/pop_woman',
                 img: '../assets/img/pop_woman/00-prwe.jpg'
-            },{
-                title: 'Smoothies Mood',
-                desc: 'Illustration',
-                category: 'illustration',
-                href: '#/works/smoothies_mood',
-                img: '../assets/img/smoothies_mood/Smoothies_illustration00-prw.jpg'
-            },{
+            }, {
                 title: 'Dress Collection',
                 desc: 'Illustration',
                 category: 'illustration',
                 href: '#/works/dress_collection',
                 img: '../assets/img/dress_collection/Woman_evening_dresses_collection-prw.jpg'
-            },{
-                title: 'Isometric Alphabet',
+            }, {
+                title: 'Decorative Items',
+                desc: 'Illustration',
+                category: 'illustration',
+                href: '#/works/decorative_items',
+                img: '../assets/img/decorative_items/etsy-00.jpg'
+            }, {
+                title: 'Holiday Garlands',
                 desc: 'GRAPHIC DESIGN',
                 category: 'graphic',
-                href: '#/works/isometric_alphabet',
-                img: '../assets/img/isometric_alphabet/000-prw.jpg'
+                href: '#/works/holiday_garlands',
+                img: '../assets/img/holiday_garlands/Holiday Garlands-00.jpg'
+            }, {
+                title: 'Fairytale house',
+                desc: 'Illustration',
+                category: 'illustration',
+                href: '#/works/fairytale_house',
+                img: '../assets/img/fairytale_house/test_(1)00.jpg'
             },
         ]
     });
@@ -409,21 +464,21 @@
 //            {title: 'contact', path: 'contact'}
         ];
 
-	$scope.repeatclick = function($event){
-			$timeout(function(){
-				$('#grid').trigger('click')
-			},200)
-			$timeout(function(){
-				$('#grid').trigger('click')
-			},800)	
-		}
+        $scope.repeatclick = function ($event) {
+            $timeout(function () {
+                $('#grid').trigger('click')
+            }, 200)
+            $timeout(function () {
+                $('#grid').trigger('click')
+            }, 800)
+        }
 
         $scope.isActive = function (route) {
             return route === $location.path();
         }
     });
 
-    app.directive('shuffle', ['$timeout','filter', function ($timeout, filter) {
+    app.directive('shuffle', ['$timeout', 'filter', function ($timeout, filter) {
         return {
             // Restrict it to be an attribute in this case
             restrict: 'A',
@@ -439,22 +494,22 @@
                 }
 
                 $timeout(function () {
-                        $(element).mixItUp({
-                            load: {
-                                filter: filter
-                            },
-                            animation: {
-                                duration: 600,
-                                easing: 'ease'
-                            },
-                            callbacks: {
-                                onMixEnd: function(state){
-                                    filter = state.activeFilter;
-                                }
+                    $(element).mixItUp({
+                        load: {
+                            filter: filter
+                        },
+                        animation: {
+                            duration: 600,
+                            easing: 'ease'
+                        },
+                        callbacks: {
+                            onMixEnd: function (state) {
+                                filter = state.activeFilter;
                             }
-                        });
+                        }
+                    });
 
-                    }, 10);
+                }, 10);
 
                 scope.loadImg = function ($event) {
                     var $el = $($event.inViewTarget),
